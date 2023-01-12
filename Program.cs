@@ -8,7 +8,7 @@ int [,] createMassiv()
         {
             for (int j=0; j<5; j++)
             {
-                newMas[i,j]=rnNum.Next(0, 100);
+                newMas[i,j]=rnNum.Next(0, 5);
                 Console.Write($"{newMas[i,j]} ");
             }
             Console.WriteLine();
@@ -34,6 +34,44 @@ int [,] sortMas(int [,] masin)
     return masin;
 }
 
+void writeMas(int [,] masInWrite)
+{
+    for (int i=0; i<masInWrite.GetLength(0); i++)
+    {
+        for (int j=0; j<masInWrite.GetLength(1); j++)
+        {
+            Console.Write($"{masInWrite[i,j]} ");
+        }
+    Console.WriteLine();
+    }
+}
+
+bool repeatNum(int [,,] masInProv, int bufIn)
+{
+    bool Val=false;
+      for (int i=0; i<5; i++)
+    {
+        for (int j=0; j<5; j++)
+        {
+            for (int k=0; k<5; k++)
+            {
+                if (bufIn==masInProv[i,j,k])
+                {
+                    Val=true;
+                    i=5;
+                    j=5;
+                    k=5;
+                } else
+                {
+                    Val=false;
+                } 
+            }
+        }
+    }
+    return Val;
+
+}
+
 // Console.WriteLine("Task 54");
 // int [,] masivUse=createMassiv();
 // int [,] sortMasWork=sortMas(masivUse);
@@ -48,34 +86,88 @@ int [,] sortMas(int [,] masin)
 // }
 
 //Task 56
-Console.WriteLine("Task 56");
-int [,] mas56=createMassiv();
-void strMin(int [,] masMin)
+// Console.WriteLine("Task 56");
+// int [,] mas56=createMassiv();
+// void strMin(int [,] masMin)
+// {
+//     int str=0;
+//     int numStr=0;
+//     for (int i=0; i<masMin.GetLength(0); i++)
+//     {
+//         int minSum=0;
+//         for (int j=0; j<masMin.GetLength(1); j++)
+//         {
+//            minSum=minSum+masMin[i,j];
+//         }
+//         if (i==0)
+//         {
+//             str=minSum;
+//         } else
+//         {
+//             if (minSum<str)
+//             {
+//             numStr=i;
+//             str=minSum;
+//             }
+//         }
+//     }
+//     Console.WriteLine($"Строка с наименьшей суммой элементов: {numStr}");
+// }
+// strMin(mas56);
+
+//Task 58
+Console.WriteLine("Task 58");
+Console.WriteLine("Матрица А: ");
+int [,] matrixA=createMassiv();
+Console.WriteLine("Матрица B: ");
+int [,] matrixB=createMassiv();
+
+int [,] compMatrix(int [,] A, int [,] B)
 {
-    int str=0;
-    int numStr=0;
-    for (int i=0; i<masMin.GetLength(0); i++)
+    int [,] matrixC=new int [5,5];
+    for (int i=0; i<5; i++)
     {
-        int minSum=0;
-        for (int j=0; j<masMin.GetLength(1); j++)
+        for (int j=0; j<5; j++)
         {
-           minSum=minSum+masMin[i,j];
-        }
-        if (i==0)
-        {
-            str=minSum;
-        } else
-        {
-            if (minSum<str)
+            for (int k=0; k<5; k++)
             {
-            numStr=i;
-            str=minSum;
+                matrixC[i,j]=matrixC[i,j]+A[i,k]*B[k,j];
+            }
+            
+        }
+    }
+return matrixC;
+}
+Console.WriteLine("Матрица, получившаяся в результате произведения матриц А и B:");
+writeMas(compMatrix(matrixA, matrixB));
+
+//Task 58
+Console.WriteLine("Task 60");
+
+int [,,] CreateMatrixTrex()
+{
+    int [,,] matr3=new int [5,5,5];
+    Random rnNum= new Random();
+    for (int i=0; i<5; i++)
+    {
+        for (int j=0; j<5; j++)
+        {
+            for (int k=0; k<5; k++)
+            { int buf=rnNum.Next(10, 99);
+                if repeatNum(matr3
+                            }
+                        }
+                    }
+
+
+
+                   matr3[i,j,k]=
             }
         }
     }
-    Console.WriteLine($"Строка с наименьшей суммой элементов: {numStr}");
 }
-strMin(mas56);
+
+
 
 
 // Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\av980\\Desktop\\Homework\\С#Sem8\\C-Sem8\\С#Sem8.csproj": {}
+    "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\av980\\Desktop\\Homework\\С#Sem8\\C-Sem8\\С#Sem8.csproj": {
+    "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\av980\\Desktop\\Homework\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
+        "projectUniqueName": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
         "projectName": "С#Sem8",
-        "projectPath": "C:\\Users\\av980\\Desktop\\Homework\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
-        "packagesPath": "C:\\Users\\av980\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\av980\\Desktop\\Homework\\С#Sem8\\C-Sem8\\obj\\",
+        "projectPath": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
+        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\av980\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
