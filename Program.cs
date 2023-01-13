@@ -1,5 +1,4 @@
-﻿//Task 54
-int [,] createMassiv()
+﻿int [,] createMassiv()
 {
     Console.WriteLine("Исходный двухмерный массив:");
     Random rnNum= new Random();
@@ -49,18 +48,18 @@ void writeMas(int [,] masInWrite)
 bool repeatNum(int [,,] masInProv, int bufIn)
 {
     bool Val=false;
-      for (int i=0; i<5; i++)
+      for (int i=0; i<3; i++)
     {
-        for (int j=0; j<5; j++)
+        for (int j=0; j<3; j++)
         {
-            for (int k=0; k<5; k++)
+            for (int k=0; k<3; k++)
             {
                 if (bufIn==masInProv[i,j,k])
                 {
                     Val=true;
-                    i=5;
-                    j=5;
-                    k=5;
+                    i=2;
+                    j=2;
+                    k=2;
                 } else
                 {
                     Val=false;
@@ -71,56 +70,6 @@ bool repeatNum(int [,,] masInProv, int bufIn)
     return Val;
 
 }
-
-// Console.WriteLine("Task 54");
-// int [,] masivUse=createMassiv();
-// int [,] sortMasWork=sortMas(masivUse);
-// Console.WriteLine("Отсортированный массив: ");
-// for (int i=0; i<sortMasWork.GetLength(0); i++)
-// {
-//     for (int j=0; j<sortMasWork.GetLength(1); j++)
-//     {
-//     Console.Write($"{sortMasWork[i,j]} ");
-//     }
-//     Console.WriteLine();
-// }
-
-//Task 56
-// Console.WriteLine("Task 56");
-// int [,] mas56=createMassiv();
-// void strMin(int [,] masMin)
-// {
-//     int str=0;
-//     int numStr=0;
-//     for (int i=0; i<masMin.GetLength(0); i++)
-//     {
-//         int minSum=0;
-//         for (int j=0; j<masMin.GetLength(1); j++)
-//         {
-//            minSum=minSum+masMin[i,j];
-//         }
-//         if (i==0)
-//         {
-//             str=minSum;
-//         } else
-//         {
-//             if (minSum<str)
-//             {
-//             numStr=i;
-//             str=minSum;
-//             }
-//         }
-//     }
-//     Console.WriteLine($"Строка с наименьшей суммой элементов: {numStr}");
-// }
-// strMin(mas56);
-
-//Task 58
-Console.WriteLine("Task 58");
-Console.WriteLine("Матрица А: ");
-int [,] matrixA=createMassiv();
-Console.WriteLine("Матрица B: ");
-int [,] matrixB=createMassiv();
 
 int [,] compMatrix(int [,] A, int [,] B)
 {
@@ -138,35 +87,189 @@ int [,] compMatrix(int [,] A, int [,] B)
     }
 return matrixC;
 }
-Console.WriteLine("Матрица, получившаяся в результате произведения матриц А и B:");
-writeMas(compMatrix(matrixA, matrixB));
 
-//Task 58
-Console.WriteLine("Task 60");
-
-int [,,] CreateMatrixTrex()
+void strMin(int [,] masMin)
 {
-    int [,,] matr3=new int [5,5,5];
-    Random rnNum= new Random();
-    for (int i=0; i<5; i++)
+    int str=0;
+    int numStr=0;
+    for (int i=0; i<masMin.GetLength(0); i++)
     {
-        for (int j=0; j<5; j++)
+        int minSum=0;
+        for (int j=0; j<masMin.GetLength(1); j++)
         {
-            for (int k=0; k<5; k++)
-            { int buf=rnNum.Next(10, 99);
-                if repeatNum(matr3
-                            }
-                        }
-                    }
-
-
-
-                   matr3[i,j,k]=
+           minSum=minSum+masMin[i,j];
+        }
+        if (i==0)
+        {
+            str=minSum;
+        } else
+        {
+            if (minSum<str)
+            {
+            numStr=i;
+            str=minSum;
             }
         }
     }
+    Console.WriteLine($"Строка с наименьшей суммой элементов: {numStr}");
 }
 
+int [,,] CreateMatrixTrex()
+{
+    int [,,] matr3=new int [3,3,3];
+    Random rnNum= new Random();
+    for (int i=0; i<3; i++)
+    {
+        for (int j=0; j<3; j++)
+        {
+            for (int n=0; n<3; n++)
+            { int buf=rnNum.Next(10, 99);
+            bool prov=repeatNum(matr3, buf);
+             if (prov==true)
+                {
+                    n--;
+                } else
+                {
+                    matr3[i,j,n]=buf;
+                }
+            }
+        }
+    }
+    return matr3;
+}
+
+int [,] createMasSpir()
+{
+    int [,] mas62=new int [4,4];
+    int sizeMas62=mas62.GetLength(0)*mas62.GetLength(1);
+    bool nxPLUS=true;
+    bool nyPLUS=false;
+    bool nxMinus=false;
+    bool nyMinus=false;
+    int indX=0;
+    int indY=0;
+    int indRight = 4;
+    int indLeft = 0;
+    int indHigh = 1;
+    int indLow = 4;
+    int CountK=0;
+while (CountK<sizeMas62-5)
+{
+    {
+        if (nxPLUS & indX<indRight)
+        {
+            for (int h=indX; h<indRight; h++)
+            {
+                mas62[indY, indX]=CountK;
+                CountK++;
+                indX++;
+            }
+            nxPLUS=false;
+            nyPLUS=true;
+            indY++;
+            indRight--;
+        }
+        //  if (nyPLUS & indY<indLow)
+        // {
+        //     for (int h=indY; h<indLow; h++)
+        //     {
+        //         mas62[indY, indX]=CountK;
+        //         CountK++;
+        //         indY++;
+        //     }
+        //     nyPLUS=false;
+        //     nxMinus=true;
+        //     indX--;
+        //     indLow--;
+        // }
+        // if (nxMinus & indX>indLeft)
+        // {
+        //     for (int h=indX; h>indLeft-1; h--)
+        //     {
+        //         mas62[indY, indX]=CountK;
+        //         CountK++;
+        //         indX--;
+        //     }
+        //     nxMinus=false;
+        //     nyMinus=true;
+        //     indY--;
+        //     indLeft++;
+        // }
+        // if (nyMinus & indY>indHigh)
+        // {
+        //     for (int h=indY; h>indHigh-1; h--)
+        //     {
+        //         mas62[indY, indX]=CountK;
+        //         CountK++;
+        //         indY--;
+        //     }
+        //     nyMinus=false;
+        //     nxPLUS=true;
+        //     indX++;
+        //     indHigh++;
+        // }
+    }
+}
+return  mas62;
+}
+
+//Task 54
+// Console.WriteLine("Task 54");
+// int [,] masivUse=createMassiv();
+// int [,] sortMasWork=sortMas(masivUse);
+// Console.WriteLine("Отсортированный массив: ");
+// for (int i=0; i<sortMasWork.GetLength(0); i++)
+// {
+//     for (int j=0; j<sortMasWork.GetLength(1); j++)
+//     {
+//     Console.Write($"{sortMasWork[i,j]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+//Task 56
+// Console.WriteLine("Task 56");
+// int [,] mas56=createMassiv();
+// strMin(mas56);
+
+// //Task 58
+// Console.WriteLine("Task 58");
+// Console.WriteLine("Матрица А: ");
+// int [,] matrixA=createMassiv();
+// Console.WriteLine("Матрица B: ");
+// int [,] matrixB=createMassiv();
+
+// Console.WriteLine("Матрица, получившаяся в результате произведения матриц А и B:");
+// writeMas(compMatrix(matrixA, matrixB));
+
+// //Task 60
+// Console.WriteLine("Task 60");
+// int [,,] newMas=CreateMatrixTrex();
+
+// for (int i=0; i<3; i++)
+// {
+//     for (int j=0; j<3; j++)
+//     {
+//         for (int k=0; k<3; k++)
+//         {
+//             Console.Write($"{newMas[i,j,k]}({i},{j},{k}) ");
+//         }
+//     }
+//     Console.WriteLine();
+// }
+
+//Task 62
+
+Console.WriteLine("Task 62");
+int [,] mas62Work=createMasSpir();
+  for (int i=0; i<mas62Work.GetLength(0); i++)
+    {
+        for (int j=0; j<mas62Work.GetLength(1); j++)
+        {
+            Console.Write($"{mas62Work[i,j]} ");
+        }
+    Console.WriteLine();
+    }
 
 
 
