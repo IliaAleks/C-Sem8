@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MSRRcXauFQeEW+nWubJ4ouhJ1rzTIhnOKYRz1nmdXThV5BqgMpW9jLOkIAJe7TD/Txa+d3eDNr32sxWjLF7Qkg==",
+  "dgSpecHash": "UWWtfiFm9iqBPSWaV2MRBfeGhe6HmxNCfNcCOZ2gUxoeRKSkCkSl367U/jgix58TZ6oULmoG0vaizbsFjL2WDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\av980\\Desktop\\C#Sem8\\C-Sem8\\С#Sem8.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\av980\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\av980\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\av980\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\av980\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

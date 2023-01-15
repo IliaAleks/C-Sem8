@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj": {}
+    "C:\\Users\\av980\\Desktop\\C#Sem8\\C-Sem8\\С#Sem8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj": {
+    "C:\\Users\\av980\\Desktop\\C#Sem8\\C-Sem8\\С#Sem8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
+        "projectUniqueName": "C:\\Users\\av980\\Desktop\\C#Sem8\\C-Sem8\\С#Sem8.csproj",
         "projectName": "С#Sem8",
-        "projectPath": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\С#Sem8.csproj",
-        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User1\\Desktop\\С#Sem8\\C-Sem8\\obj\\",
+        "projectPath": "C:\\Users\\av980\\Desktop\\C#Sem8\\C-Sem8\\С#Sem8.csproj",
+        "packagesPath": "C:\\Users\\av980\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\av980\\Desktop\\C#Sem8\\C-Sem8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\av980\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -48,12 +48,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -149,114 +149,118 @@ int [,] createMasSpir()
     int indX=0;
     int indY=0;
     int indRight = 4;
-    int indLeft = 0;
-    int indHigh = 1;
+    int indLeft = -1;
+    int indHigh = 0;
     int indLow = 4;
-    int CountK=0;
-while (CountK<sizeMas62-5)
+    int CountK=2;
+while (CountK<sizeMas62+1)
 {
     {
         if (nxPLUS & indX<indRight)
         {
             for (int h=indX; h<indRight; h++)
             {
-                mas62[indY, indX]=CountK;
+                mas62[indY, h]=CountK;
                 CountK++;
-                indX++;
+                
             }
             nxPLUS=false;
             nyPLUS=true;
             indY++;
             indRight--;
+            indX=indRight;
         }
-        //  if (nyPLUS & indY<indLow)
-        // {
-        //     for (int h=indY; h<indLow; h++)
-        //     {
-        //         mas62[indY, indX]=CountK;
-        //         CountK++;
-        //         indY++;
-        //     }
-        //     nyPLUS=false;
-        //     nxMinus=true;
-        //     indX--;
-        //     indLow--;
-        // }
-        // if (nxMinus & indX>indLeft)
-        // {
-        //     for (int h=indX; h>indLeft-1; h--)
-        //     {
-        //         mas62[indY, indX]=CountK;
-        //         CountK++;
-        //         indX--;
-        //     }
-        //     nxMinus=false;
-        //     nyMinus=true;
-        //     indY--;
-        //     indLeft++;
-        // }
-        // if (nyMinus & indY>indHigh)
-        // {
-        //     for (int h=indY; h>indHigh-1; h--)
-        //     {
-        //         mas62[indY, indX]=CountK;
-        //         CountK++;
-        //         indY--;
-        //     }
-        //     nyMinus=false;
-        //     nxPLUS=true;
-        //     indX++;
-        //     indHigh++;
-        // }
+         if (nyPLUS & indY<indLow)
+        {
+            for (int h=indY; h<indLow; h++)
+            {
+                mas62[h, indX]=CountK;
+                CountK++;
+                
+            }
+            nyPLUS=false;
+            nxMinus=true;
+            indX--;
+            indLow--;
+            indY=indLow;
+        }
+        if (nxMinus & indX>indLeft)
+        {
+            for (int h=indX; h>indLeft; h--)
+            {
+                mas62[indY, h]=CountK;
+                CountK++;
+            }
+            nxMinus=false;
+            nyMinus=true;
+            indY--;
+            indLeft++;
+            indX=indLeft;
+        }
+        if (nyMinus & indY>indHigh)
+        {
+            for (int h=indY; h>indHigh; h--)
+            {
+                mas62[h, indX]=CountK;
+                CountK++;
+               
+            }
+            
+            nyMinus=false;
+            nxPLUS=true;
+            indX++;
+            indHigh++;
+            indY=indHigh;
+        }
     }
 }
 return  mas62;
 }
 
 //Task 54
-// Console.WriteLine("Task 54");
-// int [,] masivUse=createMassiv();
-// int [,] sortMasWork=sortMas(masivUse);
-// Console.WriteLine("Отсортированный массив: ");
-// for (int i=0; i<sortMasWork.GetLength(0); i++)
-// {
-//     for (int j=0; j<sortMasWork.GetLength(1); j++)
-//     {
-//     Console.Write($"{sortMasWork[i,j]} ");
-//     }
-//     Console.WriteLine();
-// }
+Console.WriteLine("Task 54");
+int [,] masivUse=createMassiv();
+int [,] sortMasWork=sortMas(masivUse);
+Console.WriteLine("Отсортированный массив: ");
+for (int i=0; i<sortMasWork.GetLength(0); i++)
+{
+    for (int j=0; j<sortMasWork.GetLength(1); j++)
+    {
+    Console.Write($"{sortMasWork[i,j]} ");
+    }
+    Console.WriteLine();
+}
 
 //Task 56
-// Console.WriteLine("Task 56");
-// int [,] mas56=createMassiv();
-// strMin(mas56);
+Console.WriteLine("Task 56");
+int [,] mas56=createMassiv();
+strMin(mas56);
 
-// //Task 58
-// Console.WriteLine("Task 58");
-// Console.WriteLine("Матрица А: ");
-// int [,] matrixA=createMassiv();
-// Console.WriteLine("Матрица B: ");
-// int [,] matrixB=createMassiv();
+//Task 58
+Console.WriteLine("Task 58");
+Console.WriteLine("Матрица А: ");
+int [,] matrixA=createMassiv();
+Console.WriteLine("Матрица B: ");
+int [,] matrixB=createMassiv();
 
-// Console.WriteLine("Матрица, получившаяся в результате произведения матриц А и B:");
-// writeMas(compMatrix(matrixA, matrixB));
+Console.WriteLine("Матрица, получившаяся в результате произведения матриц А и B:");
+writeMas(compMatrix(matrixA, matrixB));
 
-// //Task 60
-// Console.WriteLine("Task 60");
-// int [,,] newMas=CreateMatrixTrex();
+//Task 60
+Console.WriteLine("Task 60");
+int [,,] newMas=CreateMatrixTrex();
 
-// for (int i=0; i<3; i++)
-// {
-//     for (int j=0; j<3; j++)
-//     {
-//         for (int k=0; k<3; k++)
-//         {
-//             Console.Write($"{newMas[i,j,k]}({i},{j},{k}) ");
-//         }
-//     }
-//     Console.WriteLine();
-// }
+for (int i=0; i<3; i++)
+{
+    for (int j=0; j<3; j++)
+    {
+        for (int k=0; k<3; k++)
+        {
+            Console.Write($"{newMas[i,j,k]}({i},{j},{k}) ");
+        }
+    }
+    Console.WriteLine();
+}
 
 //Task 62
 
